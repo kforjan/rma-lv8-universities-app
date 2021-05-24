@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 class RestClient {
@@ -8,6 +10,6 @@ class RestClient {
     if (statusCode < 200 || statusCode >= 400) {
       throw Exception();
     }
-    return resBody;
+    return jsonDecode(resBody);
   }
 }
