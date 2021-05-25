@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 class University {
   University({
     required this.name,
